@@ -1,0 +1,148 @@
+<form class="card">
+	<div class="card-body">
+		<h3 class="card-title">Personal Profile</h3>
+		<h4 class="card-subtitle">Step 1/2</h4>
+
+		<div class="row">
+			<div class="col-md-2">
+				<span class="avatar avatar-xl" style="background-image: url({{ site.data.users[46].photo }})"></span>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">First Name</label>
+					<input type="text" class="form-control" placeholder="First Name" value="">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Last Name</label>
+					<input type="text" class="form-control" placeholder="Last Name" valuee="">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<label class="form-label">Mobile number</label>
+				<input type="tel" class="form-control" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group">
+					<label class="form-label">Job Title</label>
+					<input type="text" class="form-control" placeholder="Job Title" value="">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Company</label>
+					<input type="text" class="form-control" placeholder="Company" value="">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">City/Country</label>
+					<input type="text" class="form-control" placeholder="City" value="Melbourne">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mt-3">
+				<div class="form-group mb-0">
+					<label class="custom-switch">
+						<input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+						<span class="custom-switch-indicator"></span>
+						<span class="custom-switch-description">I agree with terms of use and privay policy</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card-footer text-right">
+		<button type="submit" class="btn btn-primary">Next Step</button>
+	</div>
+
+</form>
+<script>
+    require(['jquery', 'selectize'], function ($, selectize) {
+        $(document).ready(function () {
+            $('#input-tags').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-countries').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-industries').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-languages').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+
+            $('#select-beast').selectize({});
+
+            $('#select-users').selectize({
+                render: {
+                    option: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            '<span class="title">' + escape(data.text) + '</span>' +
+                            '</div>';
+                    },
+                    item: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            escape(data.text) +
+                            '</div>';
+                    }
+                }
+            });
+
+            $('#select-countries').selectize({
+                render: {
+                    option: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            '<span class="title">' + escape(data.text) + '</span>' +
+                            '</div>';
+                    },
+                    item: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            escape(data.text) +
+                            '</div>';
+                    }
+                }
+            });
+        });
+    });
+	</script>

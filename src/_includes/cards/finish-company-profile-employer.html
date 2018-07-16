@@ -1,0 +1,155 @@
+<form class="card">
+	<div class="card-body">
+		<h3 class="card-title">Company Profile</h3>
+		<h4 class="card-subtitle">Step 2/2</h4>
+
+		<div class="row">
+			<div class="col-md-2">
+				<span class="avatar avatar-xl" style="background-image: url({{ site.data.users[46].photo }})"></span>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Company Name</label>
+					<input type="text" class="form-control" placeholder="Company" value="" readonly>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Company Website</label>
+					<input type="text" class="form-control" placeholder="Company" value="">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<label class="form-label">Company Phone Number</label>
+				<input type="tel" class="form-control" />
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Company Address</label>
+					<input type="text" class="form-control" placeholder="Address" value="">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Company City</label>
+					<input type="text" class="form-control" placeholder="Address" value="">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Company Country</label>
+					<select name="country" id="select-countries" class="form-control custom-select">
+						<option value="br" data-data='{"image": "/assets/images/flags/br.svg"}'>Brazil</option>
+						<option value="cz" data-data='{"image": "/assets/images/flags/cz.svg"}'>Czech Republic</option>
+						<option value="de" data-data='{"image": "/assets/images/flags/de.svg"}'>Germany</option>
+						<option value="pl" data-data='{"image": "/assets/images/flags/pl.svg"}' selected>Poland</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group mb-0">
+					<label class="form-label">Company Summary</label>
+					<textarea rows="2" class="form-control" placeholder="Here can be your summary" value=""></textarea>
+				</div>
+			</div>
+			<div class="col-auto mt-3">
+				<div class="form-group mb-0">
+					<label class="custom-switch">
+						<input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+						<span class="custom-switch-indicator"></span>
+						<span class="custom-switch-description">I agree with terms of business</span>
+					</label>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="card-footer text-right">
+			<button type="submit" class="btn btn-primary">Go to your Dashboard</button>
+		</div>
+
+</form>
+<script>
+    require(['jquery', 'selectize'], function ($, selectize) {
+        $(document).ready(function () {
+            $('#input-tags').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-countries').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-industries').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-languages').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+
+            $('#select-beast').selectize({});
+
+            $('#select-users').selectize({
+                render: {
+                    option: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            '<span class="title">' + escape(data.text) + '</span>' +
+                            '</div>';
+                    },
+                    item: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            escape(data.text) +
+                            '</div>';
+                    }
+                }
+            });
+
+            $('#select-countries').selectize({
+                render: {
+                    option: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            '<span class="title">' + escape(data.text) + '</span>' +
+                            '</div>';
+                    },
+                    item: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            escape(data.text) +
+                            '</div>';
+                    }
+                }
+            });
+        });
+    });
+	</script>
