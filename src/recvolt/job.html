@@ -7,18 +7,19 @@ menu: vacancies
 
 <div class="container">
 
-	{% include page-title.html title="Job Title" %}
-
 	<div class="row row-cards">
 
-		<div class="col-sm-4 col-lg-4">
-			{% include cards/icon-box.html color="blue" icon="fa fa-crosshairs" value="132" description="Recruiters" subtitle="3 new headhunters" %}
+		<div class="col-lg-3">
+			{% include cards/job-box.html color="green" icon="fe fe-activity" value=" " description="Job Title" subtitle="Company Name" %}
 		</div>
-		<div class="col-sm-4 col-lg-4">
-			{% include cards/icon-box.html color="red" icon="fe fe-users" value="1,352" description="Candidates" subtitle="6 new candidates" %}
+		<div class="col-lg-3">
+			{% include cards/job-box.html color="blue" icon="fe fe-crosshair" value="132" description="Recruiters" subtitle="3 new headhunters" %}
 		</div>
-		<div class="col-sm-4 col-lg-4">
-			{% include cards/icon-box.html color="yellow" icon="fe fe-message-square" value="132" description="Comments" subtitle="22 new comments" %}
+		<div class="col-lg-3">
+			{% include cards/job-box.html color="red" icon="fe fe-users" value="1,352" description="Candidates" subtitle="6 new candidates" %}
+		</div>
+		<div class="col-lg-3">
+			{% include cards/job-box.html color="yellow" icon="fe fe-message-square" value="132" description="Comments" subtitle="22 new comments" %}
 		</div>
 		<div class="col-lg-12">
 			{% include cards/job-info.html %}

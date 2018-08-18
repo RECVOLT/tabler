@@ -4,7 +4,8 @@
 			<i class="{{ include.icon | default: 'fa fa-dollar' }}"></i>
 		</span>
 		<div>
-			<h4 class="m-0"><a href="javascript:void(0)">{{ include.value | default: '16' }} <small>{{ include.description | default: 'Sales' }}</small></a></h4>
+			<h4 class="m-0"><a href="javascript:void(0)">{{ include.value | default: '16' }} {{ include.description | default: 'Sales' }}</a></h4>
+			<div class="text-muted">{{ include.subtitle | default: '6 waiting payments' }}</div>
 		</div>
 	</div>
 </div>
