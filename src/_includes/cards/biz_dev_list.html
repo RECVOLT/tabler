@@ -1,0 +1,54 @@
+<div class="card">
+	<div class="table-responsive table-striped">
+		<table class="table card-table table-vcenter text-nowrap datatable">
+			<thead>
+				<tr>
+					<th>Job Title</th>
+					<th>Location</th>
+					<th>Industry</th>
+					<th>CVs</th>
+					<th>Steps</th>
+					<th>Created</th>
+					<th>Estimated Fee</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for invoice in site.data.invoices limit: 30 %}
+				<tr>
+					<td><a href="job.html" class="text-primary">{{ invoice.name }}</a></td>
+					<td>
+						{{ invoice.client }}
+					</td>
+					<td>
+						Technology
+					</td>
+					<td>
+						2
+					</td>
+					<td>
+						1
+					</td>
+					<td>
+						{{ invoice.date }}
+					</td>
+					<td>
+						{{ invoice.price }}
+					</td>
+
+					<td class="text-right">
+						<button type="button" class="btn btn-outline-danger"><i class="fa fa-paper-plane mr-2"></i>Request Access</button>
+
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<script>
+			require(['datatables', 'jquery'], function(datatable, $) {
+				$('.datatable').DataTable();
+			});
+		</script>
+	</div>
+</div>

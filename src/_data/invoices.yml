@@ -6,7 +6,7 @@
   date: 15 Dec 2017
   status: success
   status-name: Paid
-  price: $887
+  price: USD 887
 
 -
   invoice: "00450"
@@ -16,7 +16,7 @@
   date: 12 Apr 2017
   status: warning
   status-name: Pending
-  price: $1200
+  price: USD 1200
 
 -
   invoice: "00452"
@@ -26,7 +26,7 @@
   date: 23 Oct 2017
   status: warning
   status-name: Pending
-  price: $534
+  price: USD 534
 
 -
   invoice: "00450"
@@ -36,7 +36,7 @@
   date: 2 Sep 2017
   status: secondary
   status-name: Due in 2 Weeks
-  price: $1500
+  price: USD 1500
 
 -
   invoice: "00450"
@@ -46,7 +46,7 @@
   date: 29 Jan 2018
   status: danger
   status-name: Paid Today
-  price: $648
+  price: USD 648
 
 -
   invoice: "00450"
@@ -56,7 +56,7 @@
   date: 4 Feb 2018
   status: secondary
   status-name: Due in 3 Weeks
-  price: $300
+  price: USD 300
 
 -
   invoice: "00450"
@@ -66,7 +66,7 @@
   date: 22 Mar 2018
   status: success
   status-name: Paid Today
-  price: $2500
+  price: USD 2500
 
 -
   invoice: "00450"
@@ -76,8 +76,8 @@
   date: 13 May 2018
   status: success
   status-name: Paid Today
-  price: $940
-  
+  price: USD 940
+
 -
   invoice: "00450"
   name: Design Works
@@ -86,7 +86,7 @@
   date: 15 Dec 2017
   status: success
   status-name: Paid
-  price: $887
+  price: USD 887
 
 -
   invoice: "00450"
@@ -96,7 +96,7 @@
   date: 12 Apr 2017
   status: warning
   status-name: Pending
-  price: $1200
+  price: USD 1200
 
 -
   invoice: "00452"
@@ -106,7 +106,7 @@
   date: 23 Oct 2017
   status: warning
   status-name: Pending
-  price: $534
+  price: USD 534
 
 -
   invoice: "00450"
@@ -116,7 +116,7 @@
   date: 2 Sep 2017
   status: secondary
   status-name: Due in 2 Weeks
-  price: $1500
+  price: USD 1500
 
 -
   invoice: "00450"
@@ -126,7 +126,7 @@
   date: 29 Jan 2018
   status: danger
   status-name: Paid Today
-  price: $648
+  price: USD 648
 
 -
   invoice: "00450"
@@ -136,7 +136,7 @@
   date: 4 Feb 2018
   status: secondary
   status-name: Due in 3 Weeks
-  price: $300
+  price: USD 300
 
 -
   invoice: "00450"
@@ -146,7 +146,7 @@
   date: 22 Mar 2018
   status: success
   status-name: Paid Today
-  price: $2500
+  price: USD 2500
 
 -
   invoice: "00450"
@@ -156,4 +156,4 @@
   date: 13 May 2018
   status: success
   status-name: Paid Today
-  price: $940
+  price: USD 940
