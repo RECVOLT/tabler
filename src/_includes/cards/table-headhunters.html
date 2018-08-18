@@ -1,0 +1,152 @@
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">HeadHunters</h3>
+	</div>
+	<div class="table-responsive table-striped">
+		<table class="table card-table table-vcenter text-nowrap datatable">
+			<thead>
+				<tr>
+					<th class="text-center w-1"><i class="icon-people"></i></th>
+					<th>Name</th>
+					<th>Status</th>
+					<th>Job Title / Location</th>
+					<th class="text-center">Placements</th>
+					<th class="text-center">Collaborated</th>
+					<th class="text-center">Actions</th>
+					<th class="text-center"><i class="icon-settings"></i></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="text-center">
+						<div class="avatar d-block" style="background-image: url(demo/faces/female/26.jpg)">
+							<span class="avatar-status bg-green"></span>
+						</div>
+					</td>
+					<td>
+						<a href="">
+							<div class="">Nicolas Deflaux</div>
+						</a>
+						<div class="small text-muted">
+							<a href="" class="text-secondary">Recvolt</a>
+						</div>
+					</td>
+					<td>
+						<div><span class="badge badge-success">Accepted</span></div>
+					</td>
+					<td class="">
+						<div class="small text-muted">Founder</div>
+						<div>Dubai, United Arab Emirates</div>
+					</td>
+					<td class="text-center">
+						<div>202</div>
+					</td>
+					<td class="text-center">
+						<div>Yes (18)</div>
+					</td>
+					<td class="text-center">
+						{% include dropdown-options-headhunter-accepted.html %}
+					</td>
+				</tr>
+				<tr>
+					<td class="text-center">
+						<div class="avatar d-block" style="background-image: url(demo/faces/female/25.jpg)">
+							<span class="avatar-status bg-green"></span>
+						</div>
+					</td>
+					<td>
+						<a href="">
+							<div class="">Loïc Tosser</div>
+						</a>
+						<div class="small text-muted">
+							<a href="" class="text-secondary">10TEN-DMCC</a>
+						</div>
+					</td>
+					<td>
+						<div><span class="badge badge-danger">Rejected</span></div>
+					</td>
+					<td class="">
+						<div class="small text-muted">Founder</div>
+						<div>Dubai, United Arab Emirates</div>
+					</td>
+					<td class="text-center">
+						<div>20</div>
+					</td>
+					<td class="text-center">
+						<div>No</div>
+					</td>
+					<td class="text-center">
+						{% include dropdown-options-headhunter-rejected.html %}
+					</td>
+				</tr>
+				<tr>
+					<td class="text-center">
+						<div class="avatar d-block" style="background-image: url(demo/faces/female/24.jpg)">
+							<span class="avatar-status bg-green"></span>
+						</div>
+					</td>
+					<td>
+						<a href="">
+							<div class="">Pierre Guillemot</div>
+						</a>
+						<div class="small text-muted">
+							<a href="" class="text-secondary">10TEN-DMCC</a>
+						</div>
+					</td>
+					<td>
+						<div><span class="badge badge-warning">Pending</span></div>
+					</td>
+					<td class="">
+						<div class="small text-muted">Founder</div>
+						<div>Dubai, United Arab Emirates</div>
+					</td>
+					<td class="text-center">
+						<div>20</div>
+					</td>
+					<td class="text-center">
+						<div>No</div>
+					</td>
+					<td class="text-center">
+						{% include dropdown-options-headhunter-request.html %}
+					</td>
+				</tr>
+				<tr>
+					<td class="text-center">
+						<div class="avatar d-block" style="background-image: url(demo/faces/female/23.jpg)">
+							<span class="avatar-status bg-green"></span>
+						</div>
+					</td>
+					<td>
+						<a href="">
+							<div class="">Ali Al Shaiba Al Khaleed</div>
+						</a>
+						<div class="small text-muted">
+							<a href="" class="text-secondary">Dubai Tourism and Culture</a>
+						</div>
+					</td>
+					<td>
+						<div><span class="badge badge-warning">Pending</span></div>
+					</td>
+					<td class="">
+						<div class="small text-muted">Founder</div>
+						<div>Dubai, United Arab Emirates</div>
+					</td>
+					<td class="text-center">
+						<div>20</div>
+					</td>
+					<td class="text-center">
+						<div>No</div>
+					</td>
+					<td class="text-center">
+						{% include dropdown-options-headhunter-requested.html %}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			require(['datatables', 'jquery'], function(datatable, $) {
+				$('.datatable').DataTable();
+			});
+		</script>
+	</div>
+</div>
