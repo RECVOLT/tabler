@@ -1,5 +1,8 @@
 <!-- all button should have the same size -->
 <div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Candidates</h3>
+	</div>
 	<div class="table-responsive">
 		<table class="table table-hover table-outline table-vcenter text-nowrap card-table">
 			<thead>
@@ -14,7 +17,7 @@
 			<tbody>
 				<tr>
 					<td>
-						<div>Loïc T.</div>
+						<a href="" class=""><div>Loïc T.</div></a>
 					</td>
 					<td>
 						<div>Nicolas Deflaux</div>
@@ -25,7 +28,7 @@
 					<td>
 						<div class="clearfix">
 							<div class="float-left">
-								<strong>CV Presented</strong>
+								<strong>Profile Presented</strong>
 							</div>
 							<div class="float-right">
 								<small class="text-muted">2018/08/12</small>
@@ -37,10 +40,10 @@
 						</div>
 					</td>
 					<td>
-						<a href="#" class="btn btn-outline-primary">View CV</a>
+						<a href="#" class="btn btn-outline-primary">View Profile</a>
 					</td>
 					<td class="text-right">
-						{% include dropdown-options.html %}
+						{% include dropdown-options-reject-chat.html %}
 					</td>
 				</tr>
 				<tr>
@@ -56,7 +59,7 @@
 					<td>
 						<div class="clearfix">
 							<div class="float-left">
-								<strong>CV Read</strong>
+								<strong>Profile Viewed</strong>
 							</div>
 							<div class="float-right">
 								<small class="text-muted">2018/08/15</small>
@@ -71,7 +74,7 @@
 						<a href="#" class="btn btn-outline-primary">Organise Interview</a>
 					</td>
 					<td class="text-right">
-						{% include dropdown-options.html %}
+						{% include dropdown-options-reject-chat.html %}
 					</td>
 				</tr>
 				<tr>
@@ -102,7 +105,7 @@
 						<div class="small text-muted">Waiting for recruiter</div>
 					</td>
 					<td class="text-right">
-						{% include dropdown-options.html %}
+						{% include dropdown-options-reject-chat-change-time.html %}
 					</td>
 				</tr>
 				<tr>
@@ -135,12 +138,12 @@
 						<div class="small"><span class="text-muted">Location:</span> loic_tosser</div>
 					</td>
 					<td class="text-right">
-						{% include dropdown-options.html %}
+						{% include dropdown-options-reject-chat-change-time.html %}
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div>Moa T.</div>
+						<div>Mao T.</div>
 					</td>
 					<td>
 						<div>Marco Guarda</div>
@@ -166,7 +169,7 @@
 						<a href="#" class="btn btn-outline-primary">Provide Feedback</a>
 					</td>
 					<td class="text-right">
-						{% include dropdown-options.html %}
+						{% include dropdown-options-reject-chat-offer.html %}
 					</td>
 				</tr>
 				<tr>
@@ -197,7 +200,7 @@
 						<div class="small text-muted">Waiting for Recruiter</div>
 					</td>
 					<td class="text-right">
-						{% include dropdown-options.html %}
+						{% include dropdown-options-chat.html %}
 					</td>
 				</tr>
 				<tr>
