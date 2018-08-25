@@ -1,0 +1,80 @@
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-lg-9">
+				<h3>Presented By <a href="">Nicolas Deflaux</a> on 2018/08/19 10:14 for position: <a href="">CTO</a></h3>
+			</div>
+			<div class="col-lg-3 text-left">
+				<a href="#" class="btn btn-outline-primary">Plan Interview</a>
+				{% include dropdown-options-reject-chat.html %}
+			</div>
+		</div>
+	</div>
+	<ul class="list-group card-list-group">
+		<li class="list-group-item py-5">
+			<i class="dropdown-icon fe fe-corner-down-right"></i>
+			<div class="clearfix">
+				<div class="float-left">
+					<strong>Profile Presented</strong>
+				</div>
+				<div class="float-right">
+					<small class="text-muted">3 days ago</small>
+				</div>
+			</div>
+			<div class="progress progress-xs">
+				<div class="progress-bar bg-blue-lighter" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</li>
+		<li class="list-group-item py-5">
+			<div class="media">
+				<div class="media-object avatar avatar-md mr-4" style="background-image: url({{ site.data.users[4].photo }})"></div>
+				<div class="media-body">
+					<div class="media-heading">
+						<small class="float-right text-muted">12 min</small>
+						<h5>{{ site.data.users[4].name }} {{ site.data.users[4].surname }}</h5>
+					</div>
+					<div>
+						Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis
+						parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="list-group-item py-5">
+			<div class="media">
+				<div class="media-object avatar avatar-md mr-4" style="background-image: url({{ site.data.users[4].photo }})"></div>
+				<div class="media-body">
+					<div class="media-heading">
+						<small class="float-right text-muted">34 min</small>
+						<h5>{{ site.data.users[4].name }} {{ site.data.users[4].surname }}</h5>
+					</div>
+
+					<div>
+						Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+						venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</div>
+
+					<ul class="media-list">
+						<li class="media mt-4">
+							<div class="media-object avatar mr-4" style="background-image: url({{ site.data.users[5].photo }})"></div>
+							<div class="media-body">
+								<strong>{{ site.data.users[5].name }} {{ site.data.users[5].surname }}: </strong>
+								Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus
+								auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="card-footer">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Message">
+			<div class="input-group-append">
+			</div>
+			<a href="#" class="btn btn-outline-primary">Plan Interview</a>
+			{% include dropdown-options-reject-chat.html %}
+		</div>
+	</div>
+</div>
