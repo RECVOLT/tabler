@@ -1,0 +1,72 @@
+<div class="card">
+	<div class="table-responsive">
+		<table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+			<thead>
+				<tr>
+					<th class="text-center w-1"><i class="icon-people"></i></th>
+					<th>Name</th>
+					<th>Company</th>
+					<th class="text-center">Specialties</th>
+					<th class="text-center">Countries</th>
+					<th>Activity</th>
+					<th class="text-center"><i class="icon-settings"></i></th>
+				</tr>
+			</thead>
+			<tbody>
+
+				{% for user in site.data.users limit: 8 offset: 50 %}
+				{% assign percentage = forloop.index | random_number %}
+				{% assign time_offset = forloop.index | random_number: 0, 800 %}
+				{% assign register_offset = forloop.index | random_number: 0, 8000000 %}
+				<tr>
+					<td class="text-center">
+						<div class="avatar d-block" style="background-image: url({{ user.photo }})">
+							<span class="avatar-status bg-green"></span>
+						</div>
+					</td>
+					<td>
+						<div>{{ user.name }} {{ user.surname }}</div>
+						<div class="small text-muted">
+							Consultant HR
+						</div>
+					</td>
+					<td>
+						<div>Recvolt</div>
+						<div class="small text-muted">
+							Dubai, United Arab Emirates
+						</div>
+					</td>
+					<td class="text-center">
+						<div class="tags">
+							<span class="tag">Emiratisation</span>
+							<span class="tag">Technology</span>
+							<span class="tag">Finance</span>
+						</div>
+						<div class="tags mt-2">
+							<span class="tag">Frenchitude</span>
+							<span class="tag">Pepe</span>
+						</div>
+					</td>
+					<td class="text-center">
+						<div class="tags">
+							<span class="tag">United Arab Emirates</span>
+						</div>
+						<div class="tags mt-2">
+							<span class="tag">Saudi Arabia</span>
+						</div>
+					</td>
+					<td>
+						<div class="small text-muted">Last login</div>
+						<div>{{ site.time | date: "%s" | minus: time_offset | to_pretty_time }}</div>
+					</td>
+					<td class="text-center">
+						<a href="#" class="btn btn-outline-info"><i class="fe fe-user-plus mr-2"></i>Invite</a>
+						{% include dropdown-options.html %}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+</div>
