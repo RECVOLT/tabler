@@ -1,0 +1,49 @@
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Recent activity</h3>
+	</div>
+	<div id="chart-development-activity" style="height: 10rem"></div>
+	<div class="table-responsive">
+		<table class="table card-table table-striped table-vcenter">
+			<thead>
+			<tr>
+				<th></th>
+				<th>Job</th>
+				<th>Info</th>
+				<th>Date</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td class="w-1"><a href="#" class="icon"><i class="fe fe-eye"></i></a></td>
+				<td><a href="">Business Development Manager</a></td>
+				<td>Job Posted</td>
+				<td class="text-nowrap">1 minute ago</td>
+			</tr>
+			<tr>
+				<td class="w-1"><a href="#" class="icon"><i class="fe fe-check-square"></i></a></td>
+				<td><a href="">Boutique Manager</a></td>
+				<td>Interview confirmed for candidate: <a href="">Michel Delacroix</a></td>
+				<td class="text-nowrap">3 minutes ago</td>
+			</tr>
+			<tr>
+				<td class="w-1"><a href="#" class="icon"><i class="fe fe-eye"></i></a></td>
+				<td><a href="">Sales Manager</a></td>
+				<td>Candidate <a href="">Jean Cule</a> accepted offer</td>
+				<td class="text-nowrap">3 days ago</td>
+			</tr>
+			<tr>
+				<td class="w-1"><a href="#" class="icon"><i class="fe fe-eye"></i></a></td>
+				<td><a href="">IT Manager</a></td>
+				<td>Recruiter <a href="">So Domie</a> requested access</td>
+				<td class="text-nowrap">4 days ago</td>
+			</tr>
+			<tr class="text-center">
+				<td colspan="4"><a href="">Show All</a></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% include js-charts.html id="chart-development-activity" data="development-activity" %}

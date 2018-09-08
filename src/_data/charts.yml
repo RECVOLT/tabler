@@ -23,14 +23,14 @@ development-activity:
   name: Development Activity
   type: area
   groups: [1, 2, 3]
-  hide-points: true
+  hide-points: false
   hide-tooltip: true
   remove-padding: true
   legend-position: 'top'
   series:
-    - name: 'Purchases'
-      color: blue
-      data: [0, 5, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 2, 2, 6, 30, 10, 10, 15, 14, 47, 65, 55]
+    - name: 'Last 30 days'
+      color: gray
+      data: [0, 0, 1, 2, 7, 0, 6, 8, 14, 7, 12, 0, 6, 3, 2, 2, 6, 20, 10, 10, 10, 14, 17, 11, 00, 12, 00, 10, 00]
 
 employment:
   name: Employment Growth
@@ -220,23 +220,23 @@ bar-stacked:
 
 
 pie:
-  name: Lorem ipsum
+  name: Jobs
   display: true
   type: pie
   hide-legend: true
   series:
-    - name: A
-      color: blue-darker
+    - name: Live
+      color: green
       data: [63]
-    - name: B
-      color: blue
-      data: [44]
-    - name: C
-      color: blue-light
-      data: [12]
-    - name: D
-      color: blue-lighter
+    - name: Cancel
+      color: red
       data: [14]
+    - name: On Hold
+      color: orange
+      data: [12]
+    - name: Placed
+      color: blue-dark
+      data: [44]
 
 donut:
   name: Lorem ipsum

@@ -1,0 +1,42 @@
+---
+layout: default
+title: Homepage
+menu: index
+---
+
+
+<div class="container">
+
+	<div class="row row-cards">
+
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=0 title="Jobs Live" icon="fe-plus" btn_title=" Post a Job" %}
+		</div>
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=2020 title="Active Recruiters" icon="fe-crosshair" btn_title=" Find a recruiter" %}
+		</div>
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=14 title="Pending Invitations" icon="fe-pause" btn_title=" Review" %}
+		</div>
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=12 title="Pending Requests" icon="fe-send" btn_title=" Invite More" %}
+		</div>
+		<div class="col-md-3">
+			<div class="row">
+				<div class="col-sm-12">
+					{% include cards/chart_jobs.html height=12 title="Jobs Statistics" id="chart-pie" data="pie" %}
+				</div>
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="yellow" icon="fe fe-dollar-sign" value="15,000" description="AED" subtitle="upcoming paiments" %}
+				</div>
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="blue-lighter" icon="fe fe-dollar-sign" value="14,000" description="AED" subtitle="Average Fee" %}
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-9">
+			{% include cards/activity-last-month_employer.html %}
+		</div>
+
+	</div>
+</div>
