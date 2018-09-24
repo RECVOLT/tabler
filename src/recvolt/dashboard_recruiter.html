@@ -1,0 +1,101 @@
+---
+layout: default
+title: Homepage
+menu: index
+---
+
+
+<div class="container">
+
+	<div class="row row-cards">
+
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=20 title="Your Jobs Live" icon="fe-plus" btn_title=" View my jobs" %}
+		</div>
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=2020 title="Other Opened Jobs" icon="fe-crosshair" btn_title=" Get more jobs" %}
+		</div>
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=14 title="Pending Invitations" icon="fe-play" btn_title=" Review" %}
+		</div>
+		<div class="col-6 col-sm-6 col-lg-3">
+			{% include cards/stats_employer.html number=12 title="Pending Requests" icon="fe-send" btn_title=" Invite More" %}
+		</div>
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Revenues</h3>
+				</div>
+				<div class="card-body">
+					<div id="chart-wrapper" style="height: 16rem"></div>
+				</div>
+			</div>
+			<script>
+				require(['c3', 'jquery'], function(c3, $) {
+					$(document).ready(function(){
+						var chart = c3.generate({
+							bindto: '#chart-wrapper', // id of chart wrapper
+							data: {
+								columns: [
+									// each columns data
+									['data1', 7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+									['data2', 3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+								],
+								labels: true,
+								type: 'bar', // default type of chart
+								groups: [
+            ['data1', 'data2']
+								],
+								colors: {
+									'data1': tabler.colors["blue"],
+									'data2': tabler.colors["green"]
+								},
+								names: {
+									// name of each serie
+									'data1': 'Not Paid',
+									'data2': 'Paid'
+								}
+							},
+							axis: {
+								x: {
+									type: 'category',
+									// name of each category
+									categories: ['-6','-5','-4','-3','-2','-1','1','2','3','4','5','6',]
+								},
+							},
+							legend: {
+								show: true, //hide legend
+							},
+							padding: {
+								bottom: 0,
+								top: 0
+							},
+						});
+					});
+				});
+			</script>
+		</div>		<div class="col-md-3">
+			<div class="row">
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="teal" icon="fe fe-database" value="16" description=" " subtitle="Total number of placements" %}
+				</div>
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="blue" icon="fe fe-dollar-sign" value="280,000" description="AED" subtitle="Total revenues" %}
+				</div>
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="green" icon="fe fe-dollar-sign" value="160,000" description="AED" subtitle="Total Paid" %}
+				</div>
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="yellow" icon="fe fe-dollar-sign" value="15,000" description="AED" subtitle="upcoming paiments" %}
+				</div>
+				<div class="col-sm-12">
+					{% include cards/icon-box.html color="blue-lighter" icon="fe fe-dollar-sign" value="14,000" description="AED" subtitle="Average Fee" %}
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-9">
+			{% include cards/activity-last-month_employer.html %}
+		</div>
+
+	</div>
+</div>
