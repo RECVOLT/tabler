@@ -1,0 +1,128 @@
+<form class="card">
+	<div class="card-body">
+		<h3 class="card-title">Organize Interview</h3>
+		<h4 class="card-subtitle"></h4>
+
+		<div class="row">
+			<div class="col-md-3">
+				<label class="form-label">Expected Interview Duration</label>
+				<input type="tel" class="form-control" />
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Interview Type</label>
+					<input type="text" class="form-control" placeholder="Address" value="">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Interview Information</label>
+					<input type="text" class="form-control" placeholder="Address" value="">
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Interviewer Name</label>
+					<input type="text" class="form-control" placeholder="" value="">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="form-label">Interviewer Job Title</label>
+					<input type="text" class="form-control" placeholder="" value="">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="form-label">Notes</label>
+					<textarea rows="2" class="form-control" placeholder="Here can be your description" value="Mike"></textarea>
+				</div>
+			</div>
+		</div>
+</form>
+
+<script>
+    require(['jquery', 'selectize'], function ($, selectize) {
+        $(document).ready(function () {
+            $('#input-tags').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-countries').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-industries').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+            $('#input-languages').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+
+            $('#select-beast').selectize({});
+
+            $('#select-users').selectize({
+                render: {
+                    option: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            '<span class="title">' + escape(data.text) + '</span>' +
+                            '</div>';
+                    },
+                    item: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            escape(data.text) +
+                            '</div>';
+                    }
+                }
+            });
+
+            $('#select-countries').selectize({
+                render: {
+                    option: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            '<span class="title">' + escape(data.text) + '</span>' +
+                            '</div>';
+                    },
+                    item: function (data, escape) {
+                        return '<div>' +
+                            '<span class="image"><img src="' + data.image + '" alt=""></span>' +
+                            escape(data.text) +
+                            '</div>';
+                    }
+                }
+            });
+        });
+    });
+	</script>
